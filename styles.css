@@ -1,0 +1,21 @@
+/* Root variables for easier color and style customization */
+:root {
+  
+}
+
+/* Universal reset to eliminate default padding, margin, and border-box model */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Ensures border and padding do not affect element width/height */
+}
+
+/* Basic body styles, 1rem = 16px */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
