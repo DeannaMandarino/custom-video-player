@@ -56,7 +56,7 @@ body {
 
 /* Makes controls appear when video is hovered on */
 .video-player:hover .video-player__controls {
-  transform: translateY(-4.3px);
+  transform: translateY(-4px);
 }
 
 /* Progress bar styles */
