@@ -165,3 +165,33 @@ input[type=range]::-moz-range-thumb {
   margin-top: -2.3px;
   box-shadow:0 0 3px var(--slider-thumb-shadow);
 }
+
+/* Media queries */
+@media (min-width: 500px) {
+  .video-player__controls > * {
+    flex: 1;
+  }
+
+  .video-player__controls {
+    column-gap: 0px;
+  }
+
+  .video-player__controls--progress-bar {
+    flex: 10;
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+  }
+
+  .toggle {
+    margin-left: 0px;
+  }
+  
+  .forward {
+    margin-right: 0px;
+  }
+
+  input[type=range] {
+    margin: 0 8px;
+  }
+}
