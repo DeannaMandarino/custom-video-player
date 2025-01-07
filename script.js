@@ -26,10 +26,23 @@ function skip() {
   video.currentTime += parseFloat(this.dataset.skip);
 }
 
+// Handle range input changes (volume/speed)
+function handleRangeUpdate() {
+  video[this.name] = this.value;
+}
+
 /* Hook Up the Event Listeners */
+// Event listeners for play/pause
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 toggle.addEventListener('click', togglePlay);
 
+// Event listeners for skip (forwards & backwards) buttons
 skipButtons.forEach(button => button.addEventListener('click', skip));
+
+// Event listeners for slider inputs (volume & speed)
+ranges.forEach(range => {
+  range.addEventListener('change', handleRangeUpdate);
+  range.addEventListener('mousemove', handleRangeUpdate);
+});
