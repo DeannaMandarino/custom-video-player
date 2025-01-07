@@ -94,3 +94,18 @@ body {
 .video-player__controls--button:hover, label:hover {
   background-color: var(--controls-bg-color);
 }
+
+/* Makes the sliders take up more room */
+.video-player__controls--slider {
+  flex: 1;
+}
+
+/* Leaves some space before play/pause button */
+.toggle {
+  margin-left: 5px;
+}
+
+/* Leaves some space after skip forward button */
+.forward {
+  margin-right: 5px;
+}
