@@ -7,6 +7,8 @@
   <meta name="description" content="Custom HTML video player with interactive controls">
   <meta name="author" content="Deanna Mandarino">
 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
   <!-- Link to external CSS stylesheet -->
   <link rel="stylesheet" href="styles.css">
 
@@ -26,17 +28,24 @@
         </div>
 
         <!-- Play/Pause button -->
-        <button class="video-player__controls--button" aria-label="Play/Pause">►</button>
+        <button class="video-player__controls--button toggle" aria-label="Play/Pause">
+          <i class="fa-solid fa-play"></i>
+        </button>
 
         <!-- Volume control slider -->
-        <input class="video-player__controls--slider" type="range" name="volume" min="0" max="1" step="0.05" value="0.5" aria-label="Volume">
+        <label for="volumne-control">
+          <i class="fa-solid fa-volume-high"></i>
+        </label>
+        <input class="video-player__controls--slider" id="volume-control" type="range" name="volume" min="0" max="1" step="0.05" value="0.5" aria-label="Volume">
 
         <!-- Playback speed control slider -->
-        <input class="video-player__controls--slider" type="range" name="playback" min="0.5" max="2" step="0.1" value="1" aria-label="Playback Speed">
+        <input class="video-player__controls--slider" type="range" name="playbackRate" min="0.5" max="2" step="0.1" value="1" aria-label="Playback Speed">
 
         <!-- Skip buttons -->
-        <button class="video-player__controls--button" aria-label="Skip back 10 seconds">« 10s</button>
-        <button class="video-player__controls--button" aria-label="Skip forward 25 seconds">25s »</button>
+        <button class="video-player__controls--button skip" data-skip="-10" aria-label="Skip back 10 seconds"><i class="fa-solid fa-backward"></i> 10s</button>
+        <button class="video-player__controls--button skip forward" data-skip="10" aria-label="Skip forward 10 seconds">10s 
+          <i class="fa-solid fa-forward"></i>
+        </button>
       </div>
     </section>
   </main>
