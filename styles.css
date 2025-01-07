@@ -82,8 +82,8 @@ body {
   flex-basis: 50%;
 }
 
-/* Button/label styles */
-.video-player__controls--button, label {
+/* Button styles */
+.video-player__controls--button {
   background: none;
   color: var(--button-symbol-color);
   border: none;
@@ -93,8 +93,8 @@ body {
   max-width: 50px;
 }
 
-/* Makes buttons/label have a background color when hovered on */
-.video-player__controls--button:hover, label:hover {
+/* Makes buttons have a background color when hovered on */
+.video-player__controls--button:hover {
   background-color: var(--controls-bg-color);
 }
 
