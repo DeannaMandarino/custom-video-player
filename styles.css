@@ -3,6 +3,8 @@
   --dark-gradient: rgb(26, 26, 26);
   --light-gradient: rgb(107, 107, 107);
   --controls-bg-color: rgba(0, 0, 0, 0.5);
+  --controls-accent-color: rgb(216, 52, 52);
+  --button-symbol-color: rgb(255, 255, 255);
 }
 
 /* Universal reset to eliminate default padding, margin, and border-box model */
@@ -68,4 +70,27 @@ body {
 /* Makes progress bar taller when video is hovered on */
 .video-player:hover .video-player__controls--progress-bar {
   height: 15px;
+}
+
+/* Progress bar filled styles */
+.video-player__controls--progress-bar__filled {
+  width: 50%;
+  background: var(--controls-accent-color);
+  flex-basis: 50%;
+}
+
+/* Button/label styles */
+.video-player__controls--button, label {
+  background: none;
+  color: var(--button-symbol-color);
+  border: none;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  max-width: 50px;
+}
+
+/* Makes buttons/label have a background color when hovered on */
+.video-player__controls--button:hover, label:hover {
+  background-color: var(--controls-bg-color);
 }
