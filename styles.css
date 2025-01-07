@@ -1,6 +1,7 @@
 /* Root variables for easier color and style customization */
 :root {
-  
+  --dark-gradient: rgb(26, 26, 26);
+  --light-gradient: rgb(107, 107, 107);
 }
 
 /* Universal reset to eliminate default padding, margin, and border-box model */
@@ -18,4 +19,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to bottom, var(--dark-gradient), var(--light-gradient), var(--dark-gradient));
+}
+
+/* Container styles for screen and controls */
+.video-player {
+  max-width: 750px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 15px;
+}
+
+/* Screen takes up 100% of container */
+.video-player__screen {
+  width: 100%;
 }
